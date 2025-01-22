@@ -14,11 +14,11 @@ body {
     padding: 20px;
 }
 
-.search-bar {
+.search {
     margin-top: 20px;
 }
 
-.search-bar input {
+.search input {
     width: 300px;
     padding: 10px;
     border-radius: 20px;
