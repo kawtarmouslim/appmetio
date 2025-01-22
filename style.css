@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("image/sunrise-165094_1280 (1).jpg");
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center; 
+    color: white;
+}
+
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.search-bar {
+    margin-top: 20px;
+}
+
+.search-bar input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.current-weather {
+    margin-top: 50px;
+}
+
+.current-weather h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.current-weather .details {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.forecast {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.day {
+    text-align: center;
+}
+
+.day img {
+    width: 50px;
+    height: 50px;
+}
+
+.day h4 {
+    margin: 10px 0 5px 0;
+}
