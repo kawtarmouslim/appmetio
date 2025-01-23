@@ -39,25 +39,23 @@
     document.querySelector(".temperatureema").innerHTML= dataDetailJours.list[28].main.temp  +"°C";
     document.querySelector(".Humiditema").innerHTML=dataDetailJours.list[28].main.humidity +"%";
     document.querySelector(".windma").innerHTML=dataDetailJours.list[28].wind.speed +"KM/h";
-    if(data.weather[0].main == "nuages"){
-      weatherIcon.src="image/nuage.svg"
-    } 
-    else if(dataDetailJours.weather[0].main == "Clear"){
-      weatherIcon.src="image/clair.svg"
 
-    }
-    else if(dataDetailJours.weather[0].main == "Plui"){
-      weatherIcon.src="image/pluis.svg"
 
-    }
-    else if(dataDetailJours.weather[0].main == "soleil"){
-      weatherIcon.src="image/soleil.svg"
+    
+    const weatherType = dataDetailJours.list[1].weather[0].main;
 
+    if (weatherType === "Clouds") {
+      weatherIcon.src = "image/nuage.svg";
+    } else if (weatherType === "Clear") {
+      weatherIcon.src = "image/clair.svg";
+    } else if (weatherType === "Rain") {
+      weatherIcon.src = "image/pluis.svg";
+    } else if (weatherType === "Sunny") {
+      weatherIcon.src = "image/soleil.svg";
+    } else if (weatherType === "Mist") {
+      weatherIcon.src = "image/cloudy-night-2.svg";
     }
-    else if(dataDetailJours.weather[0].main == "Mist"){
-      weatherIcon.src="image/cloudy-night-2.svg"
-
-    }
+    
     
   }
   
