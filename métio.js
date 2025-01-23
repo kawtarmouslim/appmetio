@@ -28,10 +28,36 @@
     var dataDetailJours =await responsee.json();
     console.log(dataDetailJours);
     
-    /*document.querySelector(".temperaturee").innerHTML= dataDetailJours.list[0].main.temp  +"°C";
-    document.querySelector(".Humidite").innerHTML=dataDetailJours.main.humidity +"%";
-    document.querySelector(".wind1").innerHTML=dataDetailJours.wind.speed +"KM/h";*/
+    document.querySelector(".tempv").innerHTML= dataDetailJours.list[1].main.temp  +"°C";
+    document.querySelector(".Humiditev").innerHTML=dataDetailJours.list[1].main.humidity +"%";
+    document.querySelector(".windv").innerHTML=dataDetailJours.list[1].wind.speed +"KM/h";
+
+    document.querySelector(".temperaturel").innerHTML= dataDetailJours.list[25].main.temp  +"°C";
+    document.querySelector(".Humiditel").innerHTML=dataDetailJours.list[25].main.humidity +"%";
+    document.querySelector(".windl").innerHTML=dataDetailJours.list[25].wind.speed +"KM/h";
    
+    document.querySelector(".temperatureema").innerHTML= dataDetailJours.list[28].main.temp  +"°C";
+    document.querySelector(".Humiditema").innerHTML=dataDetailJours.list[28].main.humidity +"%";
+    document.querySelector(".windma").innerHTML=dataDetailJours.list[28].wind.speed +"KM/h";
+    if(data.weather[0].main == "nuages"){
+      weatherIcon.src="image/nuage.svg"
+    } 
+    else if(dataDetailJours.weather[0].main == "Clear"){
+      weatherIcon.src="image/clair.svg"
+
+    }
+    else if(dataDetailJours.weather[0].main == "Plui"){
+      weatherIcon.src="image/pluis.svg"
+
+    }
+    else if(dataDetailJours.weather[0].main == "soleil"){
+      weatherIcon.src="image/soleil.svg"
+
+    }
+    else if(dataDetailJours.weather[0].main == "Mist"){
+      weatherIcon.src="image/cloudy-night-2.svg"
+
+    }
     
   }
   
@@ -54,7 +80,7 @@
       weatherIcon.src="image/nuage.svg"
     } 
     else if(data.weather[0].main == "Clear"){
-      weatherIcon.src="image/soleil.svg"
+      weatherIcon.src="image/clair.svg"
 
     }
     else if(data.weather[0].main == "Plui"){
